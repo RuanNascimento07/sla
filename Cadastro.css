@@ -1,0 +1,129 @@
+/* Reset e básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.page-container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-panel {
+    background-color: #1e88e5;
+    color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.left-panel h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.left-panel p {
+    font-size: 18px;
+    max-width: 280px;
+}
+
+.right-panel {
+    background-color: white;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px;
+    box-shadow: -4px 0 8px rgba(0,0,0,0.05);
+}
+
+.formulario {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formulario h1 {
+    color: #1e88e5;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.formulario input {
+    padding: 12px 14px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #fafafa;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    outline: none;
+    font-weight: 500;
+}
+
+.formulario input::placeholder {
+    color: #999;
+}
+
+.formulario input:focus {
+    border-color: #1e88e5;
+    box-shadow: 0 0 6px rgba(30, 136, 229, 0.35);
+    background-color: #fff;
+}
+
+button {
+    padding: 14px;
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 6px rgba(30, 136, 229, 0.4);
+}
+
+button:hover {
+    background-color: #1565c0;
+    box-shadow: 0 4px 12px rgba(21, 101, 192, 0.6);
+}
+
+button:active {
+    background-color: #0d47a1;
+    box-shadow: 0 2px 8px rgba(13, 71, 161, 0.7);
+}
+
+@media (max-width: 768px) {
+    .page-container {
+        flex-direction: column;
+    }
+
+    .left-panel, .right-panel {
+        flex: none;
+        height: auto;
+        width: 100%;
+    }
+
+    .right-panel {
+        padding: 20px;
+        box-shadow: none;
+    }
+}
+
